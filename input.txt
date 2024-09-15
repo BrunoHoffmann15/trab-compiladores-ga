@@ -1,0 +1,42 @@
+class Teste {
+  // Esse é um comentário de linha
+
+  /* 
+    Esse é um comentário de bloco 
+    que pode ter várias linhas
+  */
+
+  int num1;
+  int num2;
+
+  int retornaMaior(int a, int b) {
+    if (a > b) {
+      return a;
+    } else {
+      return b;
+    }
+  }
+
+  bool verificaSeIguais(int a, int b) {
+    return a == b;
+  }
+
+  int main() {
+    num1 = 10;
+    num2 = 20;
+    int resultado = 1 @ 3;
+
+    int maior = retornaMaior(num1, num2);
+    bool iguais = verificaSeIguais(num1, num2);
+
+    if(iguais == true) {
+      return num1 * num2
+    } else {
+      if(num1 > num2) {
+        return num1 + num2;
+      } else {
+        return num2;
+      }
+    }
+  }
+}
