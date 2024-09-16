@@ -65,10 +65,12 @@ public class FoolLexer {
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
     "\11\0\1\1\1\2\3\3\22\0\1\1\1\4\4\0"+
-    "\1\5\1\0\2\4\1\6\2\4\2\0\1\7\12\10"+
-    "\1\0\2\4\1\11\1\4\2\0\32\12\4\0\1\12"+
-    "\1\0\32\12\1\4\1\13\1\4\7\0\1\3\u01a2\0"+
-    "\2\3\326\0\u0100\3";
+    "\1\5\1\0\2\6\1\7\1\4\1\6\2\0\1\10"+
+    "\12\11\1\0\1\6\1\4\1\12\1\4\2\0\32\13"+
+    "\4\0\1\13\1\0\1\14\1\15\1\16\1\17\1\20"+
+    "\1\21\2\13\1\22\2\13\1\23\1\13\1\24\1\25"+
+    "\2\13\1\26\1\27\1\30\1\31\1\32\4\13\1\6"+
+    "\1\33\1\6\7\0\1\3\u01a2\0\2\3\326\0\u0100\3";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -95,11 +97,12 @@ public class FoolLexer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\1\2\2\1\3\2"+
-    "\1\1\1\0\1\2\1\0\1\5";
+    "\1\0\1\1\1\2\1\3\1\4\1\5\1\1\1\6"+
+    "\1\1\1\7\1\5\11\10\1\1\1\0\1\2\4\10"+
+    "\1\11\4\10\1\0\7\10\1\12\2\10\1\7\1\10";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[16];
+    int [] result = new int[45];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -124,11 +127,15 @@ public class FoolLexer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\14\0\30\0\14\0\14\0\14\0\44\0\60"+
-    "\0\74\0\110\0\124\0\140\0\154\0\170\0\204\0\14";
+    "\0\0\0\34\0\70\0\34\0\34\0\34\0\124\0\34"+
+    "\0\160\0\214\0\250\0\304\0\340\0\374\0\u0118\0\u0134"+
+    "\0\u0150\0\u016c\0\u0188\0\u01a4\0\u01c0\0\u01dc\0\u01f8\0\u0214"+
+    "\0\u0230\0\u024c\0\u0268\0\304\0\u0284\0\u02a0\0\u02bc\0\u02d8"+
+    "\0\u02f4\0\u0310\0\u032c\0\u0348\0\u0364\0\u0380\0\u039c\0\u03b8"+
+    "\0\34\0\u03d4\0\u03f0\0\304\0\u040c";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[16];
+    int [] result = new int[45];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -151,14 +158,36 @@ public class FoolLexer {
   private static final int [] ZZ_TRANS = zzUnpacktrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\6\1\7\1\6\1\10"+
-    "\1\11\1\12\1\13\1\14\15\0\1\3\17\0\1\6"+
-    "\14\0\1\15\1\16\14\0\1\11\14\0\1\6\12\0"+
-    "\1\13\1\0\1\13\14\0\1\6\6\15\1\17\5\15"+
-    "\2\16\1\0\11\16\6\15\1\17\1\20\4\15";
+    "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\6"+
+    "\1\11\1\12\1\13\2\14\1\15\1\16\1\14\1\17"+
+    "\1\20\1\21\3\14\1\22\1\14\1\23\1\14\1\24"+
+    "\1\25\35\0\1\3\37\0\1\6\35\0\1\26\1\27"+
+    "\34\0\1\12\34\0\1\6\32\0\1\14\1\0\20\14"+
+    "\12\0\1\14\1\0\12\14\1\30\5\14\12\0\1\14"+
+    "\1\0\10\14\1\31\7\14\12\0\1\14\1\0\10\14"+
+    "\1\32\7\14\12\0\1\14\1\0\1\14\1\33\16\14"+
+    "\12\0\1\14\1\0\6\14\1\34\2\14\1\35\6\14"+
+    "\12\0\1\14\1\0\5\14\1\36\12\14\12\0\1\14"+
+    "\1\0\13\14\1\37\4\14\12\0\1\14\1\0\12\14"+
+    "\1\40\5\14\34\0\1\6\7\26\1\41\24\26\2\27"+
+    "\1\0\31\27\11\0\1\14\1\0\12\14\1\42\5\14"+
+    "\12\0\1\14\1\0\1\14\1\43\16\14\12\0\1\14"+
+    "\1\0\14\14\1\44\3\14\12\0\1\14\1\0\10\14"+
+    "\1\45\7\14\12\0\1\14\1\0\15\14\1\34\2\14"+
+    "\12\0\1\14\1\0\15\14\1\46\2\14\12\0\1\14"+
+    "\1\0\16\14\1\47\1\14\12\0\1\14\1\0\7\14"+
+    "\1\50\10\14\1\0\7\26\1\41\1\51\23\26\11\0"+
+    "\1\14\1\0\10\14\1\34\7\14\12\0\1\14\1\0"+
+    "\14\14\1\52\3\14\12\0\1\14\1\0\5\14\1\34"+
+    "\12\14\12\0\1\14\1\0\14\14\1\47\3\14\12\0"+
+    "\1\14\1\0\16\14\1\53\1\14\12\0\1\14\1\0"+
+    "\5\14\1\54\12\14\12\0\1\14\1\0\4\14\1\34"+
+    "\13\14\12\0\1\14\1\0\14\14\1\34\3\14\12\0"+
+    "\1\14\1\0\13\14\1\55\4\14\12\0\1\14\1\0"+
+    "\11\14\1\34\6\14\1\0";
 
   private static int [] zzUnpacktrans() {
-    int [] result = new int[144];
+    int [] result = new int[1064];
     int offset = 0;
     offset = zzUnpacktrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -201,11 +230,11 @@ public class FoolLexer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\1\11\1\1\3\11\6\1\1\0\1\1\1\0"+
-    "\1\11";
+    "\1\0\1\11\1\1\3\11\1\1\1\11\15\1\1\0"+
+    "\12\1\1\0\7\1\1\11\4\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[16];
+    int [] result = new int[45];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -287,6 +316,12 @@ public class FoolLexer {
   /* user code: */
   // Código Java que será inserido no início do arquivo gerado
   int line = 1;
+  int index = 0;
+
+  // Tabela composta por:
+  // index -> posição
+  // | lexema | classe | atributo
+  String [][] tabelaTokens = new String[10000][3];
 
 
   /**
@@ -646,29 +681,74 @@ public class FoolLexer {
             { System.out.println("Caracter desconhecido: " + yytext() + " na linha " + line);
             }
           // fall through
-          case 6: break;
+          case 11: break;
           case 2:
             { 
             }
           // fall through
-          case 7: break;
+          case 12: break;
           case 3:
             { line++;
             }
           // fall through
-          case 8: break;
+          case 13: break;
           case 4:
             { System.out.print(yytext());
             }
           // fall through
-          case 9: break;
+          case 14: break;
           case 5:
+            { tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "OPERADOR";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+            }
+          // fall through
+          case 15: break;
+          case 6:
+            { tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "DELIMITADOR";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+            }
+          // fall through
+          case 16: break;
+          case 7:
+            { tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "LITERAL";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+            }
+          // fall through
+          case 17: break;
+          case 8:
+            { tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "IDENTIFICADOR";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+            }
+          // fall through
+          case 18: break;
+          case 9:
+            { tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "PALAVRA_RESERVADA";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+            }
+          // fall through
+          case 19: break;
+          case 10:
             { String text = yytext();
   int newLines = text.length() - text.replace("\n", "").length();
   line += newLines;
             }
           // fall through
-          case 10: break;
+          case 20: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
