@@ -12,6 +12,12 @@
 %{
   // Código Java que será inserido no início do arquivo gerado
   int line = 1;
+  int index = 0;
+
+  // Tabela composta por:
+  // index -> posição
+  // | lexema | classe | atributo
+  String [][] tabelaTokens = new String[10000][3];
 %}
 
 // Definição de tokens
@@ -62,32 +68,66 @@ RBRACE = "}"
 }
 
 // Definição de tokens
-{CLASS} { }
-{INT} { }
-{BOOL} { }
-{VOID} { }
-{IF} { }
-{ELSE} { }
-{RETURN} {  }
-{TRUE} { }
-{FALSE} { }
-{COMMA} { }
-{IDENTIFIER} { }
-{NUMBER} { }
-{ATRIB} { }
-{PLUS} { }
-{TIMES} { }
-{EQUALS} { }
-{LESS} { }
-{GREATER} { }
-{NOT} { }
-{AND} { }
-{OR} { }
-{SEMICOLON} { }
-{LPAREN} { }
-{RPAREN} { }
-{LBRACE} { }
-{RBRACE} { }
+{CLASS} |
+{INT} |
+{BOOL} |
+{VOID} |
+{IF} |
+{ELSE} |
+{RETURN} { 
+  tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "PALAVRA_RESERVADA";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+}
+
+{TRUE} |
+{FALSE} |
+{NUMBER} { 
+  tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "LITERAL";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+}
+
+{IDENTIFIER} { 
+  tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "IDENTIFICADOR";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+}
+
+{ATRIB} |
+{PLUS} |
+{TIMES} |
+{EQUALS} |
+{LESS} |
+{GREATER} |
+{NOT} |
+{AND} |
+{OR} { 
+  tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "OPERADOR";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+}
+
+{COMMA} |
+{SEMICOLON} |
+{LPAREN} |
+{RPAREN} |
+{LBRACE} |
+{RBRACE} { 
+  tabelaTokens[index][0] = yytext();
+  tabelaTokens[index][1] = "DELIMITADOR";
+
+  System.out.println("Token \"" + yytext() + "\" adicionado na tabela de tokens na posição " + index + " como classe: " + tabelaTokens[index][1]);
+  index++;
+}
 
 // Captura caracteres desconhecidos, passando o valor e a linha
 . { System.out.println("Caracter desconhecido: " + yytext() + " na linha " + line);}
