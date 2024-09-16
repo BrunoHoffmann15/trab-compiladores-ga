@@ -31,6 +31,7 @@ RETURN = "return"
 TRUE = "true"
 FALSE = "false"
 COMMA = ","
+INVALIDIDENTIFIER = [0-9][a-zA-Z0-9_]*
 IDENTIFIER = [a-zA-Z_][a-zA-Z0-9_]*
 NUMBER = [0-9]+
 ATRIB = "="
@@ -47,6 +48,7 @@ LPAREN = "("
 RPAREN = ")"
 LBRACE = "{"
 RBRACE = "}"
+
 
 %%
 // Definição de regras
@@ -130,4 +132,4 @@ RBRACE = "}"
 }
 
 // Captura caracteres desconhecidos, passando o valor e a linha
-. { System.out.println("Caracter desconhecido: " + yytext() + " na linha " + line);}
+{INVALIDIDENTIFIER} | . { System.out.println("Caracter desconhecido: " + yytext() + " na linha " + line);}
