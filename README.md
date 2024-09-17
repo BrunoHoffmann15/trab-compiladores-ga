@@ -4,9 +4,9 @@ Alunos: Bruno Hoffmann e Rafael Klauck
 
 ## Como Executar
 
-1. Inicialmente rode o comando `./dependencies/jflex/bin/jflex main.jflex`. Após um arquivo `FoolLexer.java` será gerado.
+1. Inicialmente rode o comando `./dependencies/jflex/bin/jflex main.jflex`. Após um arquivo `FoolLexer.java` será gerado. Notas: Se caso você já possuir o jflex instalado, pode executar diretamente o `jflex main.flex`.
 
-2. Em seguida, execute o comando `javac FoolLexer.java`, que irá compilar a classe Java gerada. O arquivo `FoolLexer.class` será gerada.
+2. Em seguida, execute o comando `javac FoolLexer.java`, que irá compilar a classe Java gerada. O arquivo `FoolLexer.class` será gerado.
 
 3. Execute ele rodando com comando `java FoolLexer input.txt`, onde o `input.txt` é o código que se deseja analisar. 
 
@@ -145,3 +145,7 @@ Token "}" adicionado na tabela de tokens na posição 125 como classe: DELIMITAD
 Token "}" adicionado na tabela de tokens na posição 126 como classe: DELIMITADOR
 Token "}" adicionado na tabela de tokens na posição 127 como classe: DELIMITADOR
 ```
+
+## Link do Github
+
+https://github.com/BrunoHoffmann15/trab-compiladores-ga
